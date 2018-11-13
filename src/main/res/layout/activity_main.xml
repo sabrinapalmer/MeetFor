@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/me_page"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="40pt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/navigation"
+        tools:layout_editor_absoluteY="511dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/transportation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/transportation"
+        tools:layout_editor_absoluteY="511dp"
+        app:layout_constraintTop_toBottomOf="@id/button_my_location" />
+
+
+    <Button
+    android:id="@+id/button_my_location"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="where am I?"
+    android:textAlignment="center"
+    android:textAllCaps="false"
+    android:layout_marginTop="20dp"
+    android:textSize="10pt"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <TextView
+        android:id="@+id/meetForTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="what do we wanna meetFor?"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/meetForTextView"
+        android:layout_centerVertical="true"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:id="@+id/forSearchText"
+        android:background="@color/darkgrey"
+        android:hint="try searching 'coffee' or 'thai food'"
+        android:imeOptions="actionSearch"
+        android:singleLine="true"/>
+
+    <ImageView
+        android:id="@+id/arrow1"
+        android:layout_width="103dp"
+        android:layout_height="57dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_arrow"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintStart_toStartOf="@id/navigation"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="70dp"/>
+
+    <ImageView
+        android:id="@+id/arrow2"
+        android:layout_width="103dp"
+        android:layout_height="57dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_arrow"
+        app:layout_constraintBottom_toTopOf="@id/navigation"
+        app:layout_constraintStart_toEndOf="@id/arrow1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="50dp"/>
+
+    <Button
+        android:id="@+id/sendSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="search!"
+        app:layout_constraintTop_toBottomOf="@id/forSearchText"
+        android:layout_marginTop="60dp"
+        android:textSize="12pt"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/searchErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintTop_toBottomOf="@id/sendSearchButton"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/searchBoxErrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="please enter a search term"
+        app:layout_constraintTop_toBottomOf="@id/searchErrorText"
+        android:gravity="center_horizontal"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_marginTop="15dp" />
+
+
+</android.support.constraint.ConstraintLayout>

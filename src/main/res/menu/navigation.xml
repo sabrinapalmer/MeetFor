@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/button_me_page"
+        android:icon="@drawable/ic_action_name"
+        android:title="@string/me_page" />
+
+    <item
+        android:id="@+id/button_you_page"
+        android:icon="@drawable/ic_people"
+        android:title="@string/you_page" />
+
+    <item
+        android:id="@+id/button_for_page"
+        android:icon="@drawable/ic_for"
+        android:title="@string/for_page" />
+
+
+</menu>
